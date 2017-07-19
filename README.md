@@ -33,3 +33,8 @@ meteor run
 * Email me: Keevandance@gmail.com
 or
 * Open an issue :)
+
+## Roadmap
+
+* Convert BlazeJS to React
+* Convert project to ReactNative
