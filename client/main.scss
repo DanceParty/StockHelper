@@ -1,0 +1,20 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+h6 {
+  margin-top: 1em !important;
+}
+
+// If you want to override materialize sass variables you can uncomment the following:
+// @import "{poetic:materialize-scss}/sass/components/_color.scss";
+// $primary-color: color("blue", "lighten-2");
+
+// import main scss file
+@import "{poetic:materialize-scss}/sass/materialize.scss";

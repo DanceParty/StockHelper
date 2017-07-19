@@ -1,0 +1,87 @@
+<template name="peRatioForm">
+  <div class="row">
+    <form class="js-form-submit col s12">
+      <h3 class="left-align">Calculator</h3>
+      <div class="card grey lighten-5">
+        <div class="card-content">
+          <span class="card-title"></span>
+
+            <div class="section">
+              <h5>Company</h5>
+            </div>
+            <div class="row">
+              <div class="input-field col s10 offset-s1">
+                <i class="material-icons prefix">spellcheck</i>
+                <input id="stock_ticker" type="text" class="validate">
+                <label for="stock_ticker">Company Name</label>
+              </div>
+            </div>
+
+            <div class="section">
+              <h5>With Earnings Per Share</h5>
+            </div>
+            <div class="row">
+              <div class="input-field col s10 offset-s1">
+                <i class="material-icons prefix">attach_money</i>
+                <input id="current_market_price_weps" type="text" class="validate">
+                <label for="current_market_price_weps">Current Market Price</label>
+              </div>
+              <div class="input-field col s10 offset-s1">
+                <i class="material-icons prefix">attach_money</i>
+                <input id="earnings_per_share_weps" type="tel" class="validate">
+                <label for="earnings_per_share_weps">Earnings Per Share</label>
+              </div>
+            </div>
+
+            <h5 class="center-align">or</h5>
+            <div class="section">
+              <h5>Without Earnings Per Share</h5>
+              <h6><blockquote>write out all 0's for $millions and $billions</blockquote></h6>
+            </div>
+            <div class="row">
+              <div class="input-field col s10 offset-s1">
+                <i class="material-icons prefix">attach_money</i>
+                <input id="current_market_price" type="text" class="validate">
+                <label for="current_market_price">Current Market Price</label>
+              </div>
+              <div class="input-field col s10 offset-s1">
+                <i class="material-icons prefix">attach_money</i>
+                <input id="net_income" type="tel" class="validate">
+                <label for="net_income">Net Income Over 4 Quarters</label>
+              </div>
+              <div class="input-field col s10 offset-s1">
+                <i class="material-icons prefix">attach_money</i>
+                <input id="shares_outstanding" type="tel" class="validate">
+                <label for="shares_outstanding">Shares Outstanding</label>
+              </div>
+              <div class="input-field col s10 offset-s1">
+                <i class="material-icons prefix">attach_money</i>
+                <input id="dividends_on_preferred_stock" type="tel" class="validate">
+                <label for="dividends_on_preferred_stock">Dividends on Preferred Stock (optional)</label>
+              </div>
+            </div>
+
+        </div>
+      </div>
+      <button class="js-calculate waves-effect waves-light btn right">Calculate</button>
+    </form>
+  </div>
+  <div class="row">
+    <div class="col s6">
+      <h6 class="center-align">Earnings Per Share</h6>
+    </div>
+    <div class="col s6">
+      <h6 class="center-align">Price Earnings Ratio</h6>
+
+    </div>
+    <div class="container">
+      <hr>
+    </div>
+    <div class="col s6">
+      <h4 class="center-align">{{showEarningsPerShare}}</h4>
+    </div>
+    <div class="col s6">
+      <h4 class="center-align">{{showPriceEarningsRatio}}</h4>
+    </div>
+  </div>
+</template>

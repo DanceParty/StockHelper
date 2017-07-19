@@ -1,0 +1,7 @@
+<template name="App_body">
+  {{#if currentUser}}
+    {{> Template.dynamic template=main}}
+  {{else}}
+    {{> login}}
+  {{/if}}
+</template>

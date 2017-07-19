@@ -1,0 +1,20 @@
+<template name="App_history">
+  {{> topnav topnavArgs}}
+  {{#each calculation in calculationsList}}
+    <ul class="collection">
+      <li class="collection-item avatar">
+        <img src="https://logo.clearbit.com/{{calculation.ticker}}.com"
+          onerror="this.onerror=null;this.src='/img/placeholder.png';"
+          class="circle"
+        >
+        <span class="title">{{calculation.ticker}}</span>
+        <p>
+          Price Earnings Ratio: <strong>{{calculation.priceEarningsRatio}}</strong>
+          <br>
+          Earnings Per Share: <strong>{{calculation.earningsPerShare}}</strong>
+        </p>
+        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+      </li>
+    </ul>
+  {{/each}}
+</template>
